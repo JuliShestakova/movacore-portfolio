@@ -1,0 +1,18 @@
+flowchart LR
+  C[Client request] --> A[FastAPI router]
+  A --> AUTH[Auth / session]
+  AUTH --> H[Domain handler]
+
+  H -->|read/write| PG[(PostgreSQL)]
+  H -->|cache get/set| RD[(Redis)]
+  H -->|enqueue| Q[RQ queue]
+
+  H -->|aggregate| SUP[Supplier APIs]
+  SUP --> H
+
+  H --> R[JSON response]
+  R --> C
+
+  Q --> W[Worker]
+  W --> PG
+  W --> RD

@@ -1,0 +1,32 @@
+flowchart TB
+  subgraph Clients
+    WEB[React SPAs<br/>storefronts and cabinets]
+    MOB[Flutter App]
+  end
+
+  subgraph Runtime["Application runtime"]
+    API[FastAPI + Uvicorn]
+    W[RQ Workers]
+  end
+
+  subgraph Data
+    PG[(PostgreSQL 16)]
+    RD[(Redis)]
+  end
+
+  subgraph Ext[External systems]
+    SUP[Supplier APIs]
+    LLM[LLM API]
+    ADS[Ads API]
+  end
+
+  WEB -->|HTTPS JSON| API
+  MOB -->|HTTPS JSON| API
+  API --> PG
+  API --> RD
+  API --> W
+  W --> RD
+  W --> PG
+  API --> SUP
+  API --> LLM
+  API --> ADS

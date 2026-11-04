@@ -1,0 +1,15 @@
+{
+  "autoRun": {
+    "allow_instructions": [
+      "Allow creating and editing Markdown, Mermaid, Python, YAML, JSON, and text files inside this movacore-portfolio directory without asking.",
+      "Allow running local pytest, pip install for examples/requirements.txt, and directory listing commands for this portfolio project without asking.",
+      "Allow reading files from sibling private projects max_bot and nayti_servis in read-only mode for documentation accuracy without asking.",
+      "Allow git status, git diff, and git log in this portfolio directory without asking. Do not allow git push or changing GitHub repo visibility without explicit user confirmation."
+    ],
+    "block_instructions": [
+      "Every git push, gh repo create, or change to private repository visibility should go through approval first.",
+      "Every command that prints or copies .env secrets, API keys, passwords, or VPS SSH credentials should go through approval first.",
+      "Every write into the private max_bot or nayti_servis repositories should go through approval first."
+    ]
+  }
+}

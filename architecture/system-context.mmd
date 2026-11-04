@@ -1,0 +1,39 @@
+flowchart TB
+  subgraph People
+    VO[Vehicle Owner]
+    PR[Parts Retailer]
+    SO[Service Operator]
+    PO[Platform Operator]
+  end
+
+  subgraph MovaCore["MovaCore Platform"]
+    APP[MovaCore App - Flutter]
+    PARTS[Parts Web + Store Cabinet]
+    SVC[Service Web + Service Cabinet]
+    MKT[Marketing Tools]
+    API[Shared FastAPI Backend]
+  end
+
+  subgraph External
+    SUP[Supplier APIs]
+    LLM[LLM Gateway]
+    ADS[Advertising APIs]
+  end
+
+  VO --> APP
+  VO --> PARTS
+  VO --> SVC
+  PR --> PARTS
+  SO --> SVC
+  PO --> API
+  PR --> MKT
+  SO --> MKT
+
+  APP --> API
+  PARTS --> API
+  SVC --> API
+  MKT --> API
+
+  API --> SUP
+  API --> LLM
+  API --> ADS
