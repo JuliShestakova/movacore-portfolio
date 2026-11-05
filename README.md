@@ -59,11 +59,15 @@ flowchart LR
 ### MovaCore Parts
 Hypermarket-style parts discovery: article/VIN-oriented search, multi-supplier offers, store cabinets for connected shops, pricing rules, and order/lead flows.
 
+Public storefront: [гипермаркет-автозапчастей.рф](https://гипермаркет-автозапчастей.рф/)
+
 ### MovaCore Service
-Service discovery and booking for vehicle owners, plus operator cabinets for workshops (clients, posts, appointments).
+Service discovery and booking for vehicle owners, plus operator cabinets for workshops (clients, posts, appointments). Primary customer UX also surfaces in the Flutter companion app.
 
 ### MovaCore Marketing
-Business promotion tooling for automotive SMBs, including experimental Applied AI workflows for advertising operations (structured plans, tool calling, human-in-the-loop apply).
+Business promotion tooling for automotive SMBs, including Applied AI workflows for advertising operations (structured plans, tool calling, human-in-the-loop apply).
+
+Public marketing site: [movacore.ru](https://movacore.ru/)
 
 ### MovaCore App — Automotive Companion
 
@@ -72,6 +76,8 @@ A mobile application designed to connect vehicle owners with automotive services
 The goal is to create a unified digital experience for managing vehicle ownership.
 
 See [docs/mobile-app.md](docs/mobile-app.md).
+
+Honest product UI status: [docs/product-audit-stage3.md](docs/product-audit-stage3.md).
 
 ---
 
@@ -184,11 +190,38 @@ Real technical cases from the audited private systems (no invented metrics):
 
 → [docs/case-studies.md](docs/case-studies.md)
 
+## Live Demo & AI Demo
+
+| Doc | Purpose |
+|---|---|
+| [docs/live-demo.md](docs/live-demo.md) | What is publicly browsable vs local-only vs closed |
+| [docs/ai-demo.md](docs/ai-demo.md) | Production ads-agent pattern + automotive assistant teaching demo |
+| [docs/engineering-interview.md](docs/engineering-interview.md) | Interview questions grounded in MovaCore |
+| [architecture/](architecture/) | System diagrams (Mermaid) |
+
 ## Screenshots
 
-Safe UI captures (test data only) belong in [`assets/screenshots/`](assets/screenshots/).
+Real captures only (no fabricated UI). Full index: [`assets/screenshots/`](assets/screenshots/) · inventory: [`docs/full-product-screen-audit.md`](docs/full-product-screen-audit.md).
 
-Shot list for the owner (do not invent fake screenshots): [`assets/screenshots/SHOT_LIST.md`](assets/screenshots/SHOT_LIST.md).
+### Parts (public storefront)
+
+| Home | Search | Results | Offers |
+|---|---|---|---|
+| ![Parts home](assets/screenshots/parts/parts-home.png) | ![Parts search](assets/screenshots/parts/parts-search.png) | ![Parts results](assets/screenshots/parts/parts-results.png) | ![Parts offer](assets/screenshots/parts/parts-offer.png) |
+
+### MovaCore App (Flutter)
+
+| Home | Parts | Services | Profile |
+|---|---|---|---|
+| ![App home](assets/screenshots/mobile-app/app-home.png) | ![App parts](assets/screenshots/mobile-app/app-parts.png) | ![App services](assets/screenshots/mobile-app/app-services.png) | ![App profile](assets/screenshots/mobile-app/app-profile.png) |
+
+### Marketing (public site)
+
+| Landing | Products |
+|---|---|
+| ![Marketing home](assets/screenshots/marketing/marketing-home.png) | ![Marketing products](assets/screenshots/marketing/marketing-products.png) |
+
+Authenticated cabinet interiors (store / service / marketing / platform admin) are **not** shown — login surfaces only. Remaining shot list: [`assets/screenshots/SHOT_LIST.md`](assets/screenshots/SHOT_LIST.md).
 
 ---
 

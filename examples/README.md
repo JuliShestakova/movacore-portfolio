@@ -81,7 +81,10 @@ curl -s -X POST http://127.0.0.1:8765/demo/v1/parts/search ^
 | Module | What it shows |
 |---|---|
 | `ai/llm_client.py` | Abstract client + Echo stub + HTTP skeleton with retries |
-| `ai/agent_workflow.py` | Structured plan → allowlist → human apply |
+| `ai/agent_workflow.py` | Structured plan → allowlist → human apply (ads-style) |
+| `ai/automotive_assistant.py` | Symptom → structured advice → safe tools → HITL for booking/order |
+
+See [docs/ai-demo.md](../docs/ai-demo.md).
 
 Live LLM calls via `HttpLLMClient` refuse `sk-demo*` keys. Use a private `.env` only on your machine.
 

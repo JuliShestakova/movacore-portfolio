@@ -1,54 +1,39 @@
-# Screenshot Shot List (owner to capture)
+# Screenshot Shot List
 
 Do **not** invent or AI-generate fake UI screenshots.  
 Capture only from **test / staging** accounts with synthetic data.
 
 ## Rules
 
-- No real customer names, phones, emails, addresses  
+- No real customer names, phones, emails (beyond public business contacts already on the storefront)  
 - No supplier API keys, account numbers, or internal hostnames/IPs  
-- Blur or use demo articles (e.g. public OEM samples) when unsure  
-- Prefer light mode frames consistent with current product UI  
+- Demo articles only (e.g. `6Q0260849A`)  
+- Prefer frames without error toasts or empty broken states  
 
-## MovaCore Parts
+## Status (Stage 3)
 
-| ID | Shot | Suggested filename | Notes |
+| ID | Shot | Filename | Status |
 |---|---|---|---|
-| P1 | Storefront search results | `parts-search-results.png` | Demo article; show OEM + at least one analog row |
-| P2 | Offer delivery window | `parts-delivery-label.png` | Availability / pickup window label visible |
-| P3 | Store cabinet home | `store-cabinet-home.png` | Empty or test shop; no real leads PII |
-| P4 | Suppliers / sources | `store-cabinet-suppliers.png` | API sources list without secrets |
-| P5 | Orders or requests list | `store-cabinet-orders.png` | Filters visible; synthetic rows only |
+| P1 | Parts home | `parts/parts-home.png` | **Captured** |
+| P2 | Parts search (query filled) | `parts/parts-search.png` | **Captured** |
+| P3 | Brand results | `parts/parts-results.png` | **Captured** |
+| P4 | Offer / product offers | `parts/parts-offer.png` | **Captured** |
+| P5 | Store cabinet home | `parts/store-cabinet-home.png` | Pending (auth) |
+| S1 | Service discovery | `service/service-discovery.png` | Pending |
+| S2 | Service list / card | `service/service-card.png` | Pending |
+| S3 | Booking flow | `service/service-booking.png` | Pending |
+| S4 | Service cabinet | `service/service-cabinet.png` | Pending (auth) |
+| A1 | App home | `mobile-app/app-home.png` | **Captured** (VW Touran, demo plate `А 123 АА 123`, Краснодар) |
+| A2 | Garage | `mobile-app/app-garage.png` | **Captured** (VW Touran, demo plate, no VIN) |
+| A3 | Parts in app | `mobile-app/app-parts.png` | **Captured** |
+| A4 | Services map/list | `mobile-app/app-services.png` | **Captured** |
+| A5 | Calendar / bookings | `mobile-app/app-calendar.png` | Pending |
+| M1 | Marketing home | `marketing/marketing-home.png` | **Captured** |
+| M2 | Marketing products | `marketing/marketing-products.png` | **Captured** |
+| M3 | Cabinet / AI plan UI | `marketing/marketing-cabinet.png` | Pending (auth) |
 
-## MovaCore Service
+## After owner capture
 
-| ID | Shot | Suggested filename | Notes |
-|---|---|---|---|
-| S1 | Service map or list | `service-discovery.png` | Public discovery UI |
-| S2 | Service cabinet clients | `service-cabinet-clients.png` | Synthetic clients only |
-| S3 | Booking / posts | `service-cabinet-booking.png` | Test workshop |
-| S4 | Platform admin → Find Service | `platform-admin-find-service.png` | Live metrics tabs (workshops / clients / app) |
-
-## MovaCore App (Flutter)
-
-| ID | Shot | Suggested filename | Notes |
-|---|---|---|---|
-| A1 | Garage | `app-garage.png` | Fictional vehicle |
-| A2 | VIN / catalog | `app-vin-catalog.png` | Test VIN or masked |
-| A3 | Parts search | `app-parts.png` | Same demo article family if possible |
-| A4 | Service booking | `app-booking.png` | Test slot |
-| A5 | Service notes | `app-notes.png` | Synthetic note |
-
-## Platform / Marketing (optional)
-
-| ID | Shot | Suggested filename | Notes |
-|---|---|---|---|
-| M1 | Products hub | `hub-products.png` | Product cards |
-| M2 | Platform overview | `platform-admin-overview.png` | No secrets in system panel |
-| M3 | AI plan review UI | `marketing-ai-plan.png` | Dry-run / HITL screen if safe to show |
-
-## After capture
-
-1. Place files in `assets/screenshots/`  
-2. Reference them from `README.md`  
-3. Re-run security checklist (no PII in pixels)  
+1. Place PNGs in the folders above  
+2. Update this table + `README.md` gallery  
+3. Re-check pixels for PII / secrets  
