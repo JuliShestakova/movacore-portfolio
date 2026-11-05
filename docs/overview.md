@@ -50,3 +50,9 @@ flowchart TB
 ## Honest Scope of This Portfolio
 
 This public repository describes architecture and demonstrates patterns. It does **not** claim completeness of every product idea listed in roadmaps, and it does not publish private metrics or customer data.
+
+Further reading:
+
+- [About the Builder](about-the-builder.md)
+- [Engineering Case Studies](case-studies.md)
+- [Engineering Decisions](engineering-decisions.md)

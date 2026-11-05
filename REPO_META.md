@@ -1,8 +1,10 @@
-# GitHub repository metadata (apply when creating the public repo)
+# GitHub repository metadata
 
-**Do not create or push the GitHub repository until the owner explicitly confirms.**
+Public repo: https://github.com/JuliShestakova/movacore-portfolio  
 
-## Suggested name
+Stage 2 published after owner confirmation (`feat: expand MovaCore engineering portfolio`).
+
+## Name
 
 `movacore-portfolio`
 
@@ -20,4 +22,4 @@ Public
 
 ## Homepage
 
-Optional: leave empty until a public marketing domain exists. Do not point to private VPS IPs.
+Optional public product domain when ready. Do not point to private VPS IPs.

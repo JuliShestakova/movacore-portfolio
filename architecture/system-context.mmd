@@ -1,23 +1,31 @@
+%% MovaCore — system context (public portfolio)
 flowchart TB
-  subgraph People
-    VO[Vehicle Owner]
-    PR[Parts Retailer]
-    SO[Service Operator]
-    PO[Platform Operator]
+  subgraph Actors["People"]
+    VO["Vehicle Owner"]
+    PR["Parts Retailer"]
+    SO["Service Operator"]
+    PO["Platform Owner"]
   end
 
-  subgraph MovaCore["MovaCore Platform"]
-    APP[MovaCore App - Flutter]
-    PARTS[Parts Web + Store Cabinet]
-    SVC[Service Web + Service Cabinet]
-    MKT[Marketing Tools]
-    API[Shared FastAPI Backend]
+  subgraph Surfaces["MovaCore product surfaces"]
+    APP["MovaCore App<br/>Flutter"]
+    PARTS["Parts<br/>storefront + store cabinet"]
+    SVC["Service<br/>discovery + service cabinet"]
+    MKT["Marketing<br/>growth + AI agent UI"]
+    ADMIN["Platform admin<br/>/cabinet/admin"]
   end
 
-  subgraph External
-    SUP[Supplier APIs]
-    LLM[LLM Gateway]
-    ADS[Advertising APIs]
+  subgraph Core["Shared platform"]
+    API["FastAPI + Uvicorn"]
+    PG[("PostgreSQL")]
+    RD[("Redis + RQ")]
+    SQLITE[("SQLite panel.db<br/>service/app contacts")]
+  end
+
+  subgraph External["External systems"]
+    SUP["Supplier APIs"]
+    LLM["LLM gateway<br/>OpenAI-compatible"]
+    ADS["Advertising APIs"]
   end
 
   VO --> APP
@@ -25,7 +33,7 @@ flowchart TB
   VO --> SVC
   PR --> PARTS
   SO --> SVC
-  PO --> API
+  PO --> ADMIN
   PR --> MKT
   SO --> MKT
 
@@ -33,7 +41,11 @@ flowchart TB
   PARTS --> API
   SVC --> API
   MKT --> API
+  ADMIN --> API
 
+  API --> PG
+  API --> RD
+  API --> SQLITE
   API --> SUP
   API --> LLM
   API --> ADS

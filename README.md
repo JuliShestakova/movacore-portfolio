@@ -178,11 +178,17 @@ See [docs/infrastructure.md](docs/infrastructure.md) and [docs/deployment.md](do
 
 ---
 
+## Engineering Case Studies
+
+Real technical cases from the audited private systems (no invented metrics):
+
+→ [docs/case-studies.md](docs/case-studies.md)
+
 ## Screenshots
 
 Safe UI captures (test data only) belong in [`assets/screenshots/`](assets/screenshots/).
 
-> Placeholders: add screenshots from staging/test accounts before publication. Do not include real customer PII, supplier credentials, or internal hostnames.
+Shot list for the owner (do not invent fake screenshots): [`assets/screenshots/SHOT_LIST.md`](assets/screenshots/SHOT_LIST.md).
 
 ---
 
@@ -216,10 +222,10 @@ Full notes: [docs/roadmap.md](docs/roadmap.md).
 
 | Path | Purpose |
 |---|---|
-| `docs/` | Technical documentation |
+| `docs/` | Technical documentation, About, case studies |
 | `architecture/` | Mermaid system diagrams |
-| `examples/` | Safe Python / API / AI demos |
-| `assets/` | Diagrams, logos, screenshots |
+| `examples/` | Safe Python / API / AI demos + run guide |
+| `assets/` | Diagrams, logos, screenshot shot list |
 | `.github/` | Issue templates and CI for demos |
 
 ---
@@ -233,6 +239,8 @@ Hands-on experience running a real automotive business while designing, building
 Interested in Applied AI and production-ready AI applications: structured outputs, tool calling, validation, human-in-the-loop control, and systems that survive real operational constraints.
 
 This portfolio reflects work done while independently designing and evolving a complex product ecosystem — not a claim of senior/lead titles or research credentials.
+
+**Full page:** [docs/about-the-builder.md](docs/about-the-builder.md)
 
 ---
 

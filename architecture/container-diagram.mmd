@@ -1,32 +1,35 @@
+%% MovaCore — containers (Compose-shaped, hosts omitted)
 flowchart TB
   subgraph Clients
-    WEB[React SPAs<br/>storefronts and cabinets]
-    MOB[Flutter App]
+    WEB["React SPAs<br/>Vite + TypeScript"]
+    MOB["Flutter App"]
   end
 
-  subgraph Runtime["Application runtime"]
-    API[FastAPI + Uvicorn]
-    W[RQ Workers]
+  subgraph Compose["Docker Compose runtime"]
+    API["panel API<br/>uvicorn FastAPI"]
+    W["RQ worker"]
+    PG[("postgres:16")]
+    RD[("redis:7")]
   end
 
-  subgraph Data
-    PG[(PostgreSQL 16)]
-    RD[(Redis)]
+  subgraph HostData["Mounted durable data"]
+    DATA["data/ · companies/ · media/"]
   end
 
-  subgraph Ext[External systems]
-    SUP[Supplier APIs]
-    LLM[LLM API]
-    ADS[Ads API]
+  subgraph Ext["External"]
+    SUP["Supplier HTTP APIs"]
+    LLM["LLM HTTP API"]
+    ADS["Ads HTTP APIs"]
   end
 
   WEB -->|HTTPS JSON| API
   MOB -->|HTTPS JSON| API
   API --> PG
   API --> RD
-  API --> W
+  API --> DATA
   W --> RD
   W --> PG
+  W --> DATA
   API --> SUP
   API --> LLM
   API --> ADS

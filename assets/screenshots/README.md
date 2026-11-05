@@ -1,17 +1,7 @@
 # Screenshots
 
-Add UI captures from **test / staging** accounts only.
+PNG captures go here after the owner records them from **test / staging** accounts.
 
-Checklist before adding an image:
+See the full checklist: [SHOT_LIST.md](SHOT_LIST.md).
 
-- [ ] No real customer names, phones, emails, addresses
-- [ ] No supplier account numbers or API keys visible
-- [ ] No internal hostnames, IPs, or SSH details
-- [ ] Prefer blurred or synthetic data where unsure
-
-Suggested captures:
-
-1. Parts search results (demo article)
-2. Store cabinet home (empty/test shop)
-3. Service booking screen in the Flutter app
-4. Garage with a fictional vehicle
+Until then this folder intentionally contains no fabricated images.
